@@ -2,11 +2,14 @@
 
 
 var kraken = require('kraken-js'),
+    twit = require('./lib/twitterconnect'),
     app = {};
 
 
 app.configure = function configure(nconf, next) {
     // Async method run on startup.
+    // Authenticate twitter app
+    twit.authenticate(nconf.get('twitterConfig'));
     next(null);
 };
 
