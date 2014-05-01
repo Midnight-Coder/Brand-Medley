@@ -3,6 +3,7 @@
 
 var kraken = require('kraken-js'),
     twit = require('./lib/twitterconnect'),
+    reload = require('reload'),
     app = {};
 
 
