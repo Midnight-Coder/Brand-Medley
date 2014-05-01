@@ -13,17 +13,17 @@
          <form id="userinput" method="post">
             <div>
                 <label class="label bg-primary" for="brand1">Interested in: #</label>
-                <input type=text required id="brand1" pattern = "[A-Za-z0-9-_]+$" x-moz-errormessage="No hashtags required!" placeholder="node">
+                <input name="brand1" type=text required id="brand1" pattern = "[A-Za-z0-9-_]+$" x-moz-errormessage="No hashtags required!" placeholder="node">
             </div>
 
             <div>
                 <label class="label bg-primary" for="brand2">Interested in: #</label>
-                <input type=text required id="brand2" pattern = "[A-Za-z0-9-_]+$" x-moz-errormessage="No hashtags required!" placeholder="node">
+                <input name="brand2" type=text required id="brand2" pattern = "[A-Za-z0-9-_]+$" x-moz-errormessage="No hashtags required!" placeholder="node">
             </div>
 
             <div>
                 <!--If we don't at the Cross-Site Request Forgey token, this POST will be rejected-->
-                <input type="hidden" name="_csrf" value="{_csrf}">
+                <!--<input type="hidden" name="_csrf" value="{_csrf}">-->
                 <input name="count"class="btn-lg btn-submit" type="submit" value="Count, lil birdie!" formaction="/counter">
                 <!--<input name="more" class="btn-lg btn-submit" type="submit" value="Lemme Add More Brands" formaction="/">-->
             </div>
