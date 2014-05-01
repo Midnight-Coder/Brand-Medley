@@ -5,22 +5,22 @@
 {/title}
 
 {<body}
-    <h1>{@pre type="content" key="greeting"/}</h1>
+    <h2>Brand Battles : Tweet Counts </h2>
+    <h3>Enter the brands</h3>
+
     <section id="#Battle">
          <form id="userinput" action method="post">
 
             <label class="label" for="brand">Interested in: #</label>
-            <input type=text required id="brand" placeholder="tint">
+            <input type=text required id="brand" placeholder="node">
 
-            <input class="btn btn-submit btn-primary" type="submit" value="Count, lil birdie!">
-            <input class="btn btn-submit btn-danger" type="submit" value="Lemme Add More Brands">
+            <div><input class="btn btn-submit btn-primary" type="submit" value="Count, lil birdie!">
+            <input class="btn btn-submit btn-info" type="submit" value="Lemme Add More Brands"></div>
         </form>
     </section>
 
     <section id="trending">
-        <ul class="li">Trending:
-            <li class="li no1">1.Tint</li>
-            <li class="li no2">2.Yahoo</li>
-            </ul>
+        <h3>Trending Brands</h3>
+        <!-- Get the brand names use <abbr>-->
     </section>
 {/body}
