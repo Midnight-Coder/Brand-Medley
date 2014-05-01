@@ -1,0 +1,23 @@
+{>"layouts/master" /}
+
+{<title}
+    Brand Medley
+{/title}
+
+{<body}
+    <h2>Brand Battles : {#brands}{brand}{/brands}</h2>{!flat li,json: brands:[{brand:yahoo},{brand:goog}..]!}
+    <h3>Enter the brands</h3>
+
+    <section id="counter">
+            <form> <!-- action method="post"-->
+
+                <label class="label counter">Brand #1</label>
+                <input type=text disabled="" value="{brand.count[0]}">
+
+
+                <label class="label counter">Brand #2</label>
+                <input type=text disabled="" value="{brand.count[1]}">
+
+            </form>
+    </section>
+{/body}
