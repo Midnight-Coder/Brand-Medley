@@ -5,19 +5,21 @@
 {/title}
 
 {<body}
-    <h2>Brand Battles : {#brands}{brand}{/brands}</h2>{!flat li,json: brands:[{brand:yahoo},{brand:goog}..]!}
+    <h2>Brand Battles : #{.brand1} v/s #{.brand2}</h2>
     <h3>Enter the brands</h3>
 
     <section id="counter">
             <form> <!-- action method="post"-->
 
-                <label class="label counter">Brand #1</label>
-                <input type=text disabled="" value="{brand.count[0]}">
+                <div>
+                    <label class="label bg-primary">#{.brand1} : </label>
+                    <input type=text disabled="" value={.brand1count}>
+                </div>
 
-
-                <label class="label counter">Brand #2</label>
-                <input type=text disabled="" value="{brand.count[1]}">
-
+                <div>
+                    <label class="label bg-primary">#{.brand2} : </label>
+                    <input type=text disabled="" value={.brand2count}>
+                </div>
             </form>
     </section>
 {/body}
