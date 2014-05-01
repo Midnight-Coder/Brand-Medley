@@ -9,6 +9,7 @@ module.exports = function (app) {
     app.post("/counter", function(req, res){
         console.log("POST recevied");
         console.dir(req);
+        res.redirect('/counter');
     });
 
     // var model = new CounterModel();
