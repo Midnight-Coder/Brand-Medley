@@ -1,6 +1,7 @@
 {
-    "twitterConfig": {
-        "APIkey": "eBZLHVwoUovkF5z9WRuaV77FL",
-        "APIsecret": "P992AowilIBMiDGe1NYIeqBPA1Jtdm8JyXQR9S98eaXVQl8v0F"
+    "twitter": {
+        "consumer_key": "eBZLHVwoUovkF5z9WRuaV77FL",
+        "consumer_secret": "P992AowilIBMiDGe1NYIeqBPA1Jtdm8JyXQR9S98eaXVQl8v0F",
+        "application_only": true
     }
 }
