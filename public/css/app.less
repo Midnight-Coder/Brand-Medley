@@ -1,6 +1,6 @@
 @import "bootstrap-min.css";
 
-body {
+body{
     font-family: "helvetica neue", "arial", "sans";
     margin: 0 auto;
     padding: 15px;
@@ -8,11 +8,19 @@ body {
     color:#B4B4B4;
     background-color: black;
 }
-input {
+form div label{
+    font-size: 16px;
+    font-weight: 400;
+}
+input{
     margin: 5px;
     padding: 10px;
     color: rgba(39, 11, 11, 0.79);
     font-size: 16px;
+}
+input:disabled{
+    max-width: 100px;
+    max-height: 50px;
 }
 ul{
     display: inline;
@@ -25,7 +33,6 @@ ul{
     background-repeat: no-repeat;
     background-size: cover;
 }
-form div label {
-    font-size: 16px;
-    font-weight: 400;
+.counter{
+    padding: 5px 25px 25px 25px;
 }
