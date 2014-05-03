@@ -5,20 +5,18 @@
 {/title}
 
 {<body}
-    <h2>Brand Battles : #{.brand1} v/s #{.brand2}</h2>
-    <h3>Enter the brands</h3>
-
+    <h2>Brand Battles: <span class='brandnames'>#{brand1.name} </span> v/s <span class="brandnames"> #{brand2.name}</span></h2>
     <section id="counter">
             <form> <!-- action method="post"-->
 
                 <div>
-                    <label class="label bg-primary">#{.brand1} : </label>
-                    <input type=text disabled="" value={.brand1count}>
+                    <label class="label bg-primary">#{brand1.name} : </label>
+                    <input type=text disabled="" value={brand1.count}>
                 </div>
 
                 <div>
-                    <label class="label bg-primary">#{.brand2} : </label>
-                    <input type=text disabled="" value={.brand2count}>
+                    <label class="label bg-primary">#{brand2.name} : </label>
+                    <input type=text disabled="" value={.brand2.count}>
                 </div>
             </form>
     </section>

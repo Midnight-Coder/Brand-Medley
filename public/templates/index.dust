@@ -24,12 +24,12 @@
             <div>
                 <!--If we don't at the Cross-Site Request Forgey token, this POST will be rejected-->
                 <!--<input type="hidden" name="_csrf" value="{_csrf}">-->
-                <input name="count"class="btn-lg btn-submit" type="submit" value="Count, lil birdie!" formaction="/counter">
+                <input name="count"class="btn-lg btn-submit btn-danger" type="submit" value="Let the battle begin!" formaction="/counter">
                 <!--<input name="more" class="btn-lg btn-submit" type="submit" value="Lemme Add More Brands" formaction="/">-->
             </div>
         </form>
     </section>
-
+<!--
     <section id="trending">
         <h3>Trending Brands</h3>
         <!-- Get the brand names use <abbr>-->
