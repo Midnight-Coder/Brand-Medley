@@ -21,9 +21,7 @@ module.exports = function (app) {
                 callback();
             },
             searchbrand1: ['init', function(callback, results){
-                console.log("Searching Twittr");
                 brand1.twitter.get('search/tweets', {q: "#" + brand1.name, count: 100}, function(err, item) {
-                  console.log(item.statuses.length);
                   brand1.count = item.statuses.length;
                   callback(null);
                 });
@@ -31,14 +29,11 @@ module.exports = function (app) {
 
             searchbrand2: ['searchbrand1', function(callback,results){
                 brand2.twitter.get('search/tweets', {q: "#" + brand2.name, count: 50}, function(err, item) {
-                  console.log(item.statuses.length);
                   brand2.count = item.statuses.length;
                   callback(null);
                 });
             }],
             render: ['searchbrand2',function(callback, results){
-                // console.dir(model);
-                console.log("brand1:" + brand1.count + " brand2:" + brand2.count + "----" + results);
                 if(brand1.count > brand2.count){
                     brand1.class = "win";
                     brand2.class = "lose";
@@ -51,9 +46,11 @@ module.exports = function (app) {
                     brand1.class = "lose";
                     brand2.class = "win";
                 }
+                //TODO incorp a <hr> or <span - linear gradient> whose width indicates the ratio of tweets received
                 var totalTweets = brand1.count+brand2.count;
                 brand2.width = brand2.count/totalTweets;
                 brand1.width = brand1.count/totalTweets;
+
                 res.render('counter', {brand1: brand1, brand2: brand2});
                 callback(null);
             }],
